@@ -25,22 +25,31 @@ window.SHOP = {
   poster: "img/photo1.jpg",
   embedVideos: true,
   ticker: ["ช่างหนุ่มอยุธยา", "แต่งรถตู้ VIP", "DESCENT CUSTOM", "เบาะมิกกี้เมาส์", "คอนโซลพรีเมียม", "Hiace 200/300", "Club Van", "ติดต่อสอบถามฟรี"],
-  tabsServices: [["all", "ทั้งหมด"], ["interior", "ตกแต่งภายใน"], ["exterior", "ตกแต่งภายนอก"], ["audio", "เครื่องเสียง"], ["forsale", "รถตู้มือสอง"]],
+  tabsServices: [["all", "ทั้งหมด"], ["interior", "ตกแต่งภายใน"], ["exterior", "ตกแต่งภายนอก"], ["audio", "เครื่องเสียง & แอร์"], ["accessory", "ของแต่ง"], ["forsale", "รถตู้มือสอง"]],
+  /* การ์ดบริการ: มี children = กดแล้วแสดงการ์ดย่อยข้างใน / มี href = กดแล้วไปดูผลงาน */
   services: [
-    { cat: "interior", label: "SEAT", tag: "POPULAR", hot: true, group: "ภายใน", name: "เบาะมิกกี้เมาส์ VIP", desc: "เบาะหรูสุดพรีเมียม ดีไซน์เป็นเอกลักษณ์ รองรับ 8–10 ที่นั่ง", cta: "ดูผลงานเบาะ", href: "gallery.html#seat" },
-    { cat: "interior", label: "CONSOLE", tag: "CUSTOM", group: "ภายใน", name: "คอนโซลกลาง", desc: "คอนโซลพรีเมียม ออกแบบได้ตามต้องการ วัสดุคุณภาพสูง", cta: "ดูผลงานคอนโซล", href: "gallery.html#console" },
-    { cat: "interior", label: "FLOOR", group: "ภายใน", name: "ปูพื้นไม้และยาง", desc: "พื้นไม้จริงและยางคุณภาพ สวยงาม ทนทาน ดูแลรักษาง่าย", cta: "สอบถามราคา", href: "contact.html" },
-    { cat: "interior", label: "TRIM", group: "ภายใน", name: "หุ้มเบาะและห้องโดยสาร", desc: "หุ้มหนังพรีเมียมทุกจุด เลือกสี เลือกลายได้ตามใจ", cta: "สอบถามราคา", href: "contact.html" },
-    { cat: "exterior", label: "ROOF", tag: "PREMIUM", group: "ภายนอก", name: "หุ้มหนังหลังคา", desc: "หุ้มหนังหลังคาภายนอก กันร้อน สวยงาม อายุการใช้งานยาวนาน", cta: "สอบถามราคา", href: "contact.html" },
-    { cat: "exterior", label: "RENEW", group: "ภายนอก", name: "รีโนเวทหลังคาใหม่", desc: "เปลี่ยนหลังคาใหม่ทั้งชุด แก้ปัญหาหลังคาเก่าเสื่อมสภาพ", cta: "สอบถามราคา", href: "contact.html" },
-    { cat: "audio", label: "AUDIO", tag: "AUDIO", group: "เครื่องเสียง", name: "ออดิโอ้ซาวด์ & แอร์ไมโครบัส", desc: "ระบบเสียงคุณภาพสูง + แอร์ไมโครบัส สำหรับรถตู้ VIP โดยเฉพาะ", cta: "สอบถามราคา", href: "contact.html" },
+    { cat: "interior", label: "WALL", group: "ภายใน", name: "ผนัง", desc: "หุ้มแผงประตูรีดลาย ใส่คิ้ว ตกแต่งผนังห้องโดยสารให้เรียบหรู", cta: "ดูผลงานผนัง", href: "gallery.html#wall" },
+    { cat: "interior", label: "FLOOR", group: "ภายใน", name: "พื้น", desc: "ปูพื้นไม้อัด พร้อมกระเบื้องยาง สวยงาม ทนทาน ดูแลรักษาง่าย", cta: "ดูผลงานพื้น", href: "gallery.html#floor" },
+    { cat: "interior", label: "CONSOLE", tag: "CUSTOM", group: "ภายใน", name: "คอนโซล", desc: "คอนโซลพรีเมียม ออกแบบได้ตามต้องการ วัสดุคุณภาพสูง", cta: "ดูผลงานคอนโซล", href: "gallery.html#console" },
+    { cat: "interior", label: "SEAT", tag: "POPULAR", hot: true, group: "ภายใน", name: "เบาะ", desc: "เบาะ VIP 9 และ 8 ที่นั่ง เบาะคู่ไฟฟ้า และทำเบาะเดิมใหม่", cta: "เลือกดูประเภทเบาะ", children: [
+      { cat: "interior", label: "SEAT 9", group: "เบาะ", name: "เบาะ 9 ที่นั่ง", desc: "เบาะ VIP 3 แถว 9 ที่นั่ง ทำใหม่ทั้งชุด", cta: "ดูผลงาน", href: "gallery.html#seat9" },
+      { cat: "interior", label: "SEAT 8", group: "เบาะ", name: "เบาะ 8 ที่นั่ง", desc: "เบาะ VIP 8 ที่นั่ง เบาะมิกกี้เมาส์ หนังพรีเมียม", cta: "ดูผลงาน", href: "gallery.html#seat8" },
+      { cat: "interior", label: "POWER", group: "เบาะ", name: "เบาะคู่ไฟฟ้า", desc: "เบาะคู่หน้าปรับไฟฟ้า นั่งสบาย ตัดแต่งใหม่", cta: "ดูผลงาน", href: "gallery.html#seatpair" },
+      { cat: "interior", label: "RENEW", group: "เบาะ", name: "ทำเบาะเดิม", desc: "ตัดแต่งฟองน้ำใหม่ หุ้มหนังใหม่ เย็บย่น ใช้โครงเบาะเดิม", cta: "ดูผลงาน", href: "gallery.html#seatold" }
+    ] },
+    { cat: "interior", label: "CURTAIN", group: "ภายใน", name: "ผ้าม่าน", desc: "ผ้าม่านรางคู่ ผ้ายืดและผ้ายูวี 2 ชั้น เลือกลายได้", cta: "ดูผลงานผ้าม่าน", href: "gallery.html#curtain" },
+    { cat: "exterior", label: "ROOF", tag: "PREMIUM", group: "ภายนอก", name: "หุ้มหนังหลังคา", desc: "หุ้มหนังหลังคาภายนอก กันร้อน สวยงาม อายุการใช้งานยาวนาน", cta: "สอบถาม", href: "contact.html" },
+    { cat: "exterior", label: "RENEW", group: "ภายนอก", name: "รีโนเวทหลังคาใหม่", desc: "เปลี่ยนหลังคาใหม่ทั้งชุด แก้ปัญหาหลังคาเก่าเสื่อมสภาพ", cta: "สอบถาม", href: "contact.html" },
+    { cat: "audio", label: "AUDIO", tag: "AUDIO", group: "เครื่องเสียง", name: "เครื่องเสียงและจอภาพ", desc: "ซาวด์ฝาท้าย จอ LED เครื่องเล่น DVD ระบบเสียงคุณภาพสูง", cta: "ดูผลงาน", href: "gallery.html#audio" },
+    { cat: "audio", label: "AIR", group: "แอร์", name: "แอร์ไมโครบัส", desc: "เปลี่ยนระบบแอร์ไมโครบัส เย็นทั่วคัน สำหรับรถตู้ VIP โดยเฉพาะ", cta: "ดูผลงาน", href: "gallery.html#air" },
+    { cat: "accessory", label: "ACCESSORY", group: "ของแต่ง", name: "ของแต่ง", desc: "ฟิล์มกรองแสง กันชน สเกิร์ต มือจับ คิ้วฝาท้าย และครอบต่างๆ", cta: "ดูผลงาน", href: "gallery.html#accessory" },
     { cat: "forsale", label: "SALE", tag: "FOR SALE", hot: true, group: "ขายรถ", name: "รถตู้ VIP พร้อมใช้", desc: "รถตู้ VIP ป้ายแดงและมือสอง สภาพดี แต่งครบ พร้อมใช้งาน", cta: "สอบถามรถ", href: "contact.html" }
   ],
-  tabsWorks: ["ทั้งหมด", "Hiace 300", "Hiace 200", "Club Van", "เบาะ VIP", "คอนโซล"],
-  hashTabs: { seat: "เบาะ VIP", console: "คอนโซล" },
+  tabsWorks: ["ทั้งหมด", "Hiace 300", "Hiace 200", "Club Van", "เบาะ VIP", "คอนโซล", "ผนัง", "พื้น", "เบาะ 9 ที่นั่ง", "เบาะ 8 ที่นั่ง", "เบาะคู่ไฟฟ้า", "ทำเบาะเดิม", "ผ้าม่าน", "เครื่องเสียงและจอภาพ", "แอร์ไมโครบัส", "ของแต่ง"],
+  hashTabs: { seat: "เบาะ VIP", console: "คอนโซล", wall: "ผนัง", floor: "พื้น", seat9: "เบาะ 9 ที่นั่ง", seat8: "เบาะ 8 ที่นั่ง", seatpair: "เบาะคู่ไฟฟ้า", seatold: "ทำเบาะเดิม", curtain: "ผ้าม่าน", audio: "เครื่องเสียงและจอภาพ", air: "แอร์ไมโครบัส", accessory: "ของแต่ง" },
   works: [
-    { title: "แต่งภายใน Hiace 300 เต็มคัน", cat: "Hiace 300 · เบาะ VIP", tags: ["Hiace 300", "เบาะ VIP"], img: "img/photo2.jpg", alt: "แต่งภายใน Hiace 300 เบาะ VIP หนังครีม พื้นไม้" },
-    { title: "Club Van เบาะ 8 VIP", cat: "Club Van · เบาะมิกกี้เมาส์", tags: ["Club Van", "เบาะ VIP"], img: "img/photo1.jpg", alt: "แต่งรถตู้ VIP เบาะหนังส้ม มิกกี้เมาส์ ไฟเพดาน" },
+    { title: "แต่งภายใน Hiace 300 เต็มคัน", cat: "Hiace 300 · เบาะ VIP", tags: ["Hiace 300", "เบาะ VIP", "พื้น"], img: "img/photo2.jpg", alt: "แต่งภายใน Hiace 300 เบาะ VIP หนังครีม พื้นไม้" },
+    { title: "Club Van เบาะ 8 VIP", cat: "Club Van · เบาะมิกกี้เมาส์", tags: ["Club Van", "เบาะ VIP", "เบาะ 8 ที่นั่ง"], img: "img/photo1.jpg", alt: "แต่งรถตู้ VIP เบาะหนังส้ม มิกกี้เมาส์ ไฟเพดาน" },
     { title: "คอนโซลพรีเมียม Hiace 200", cat: "Hiace 200 · คอนโซล", tags: ["Hiace 200", "คอนโซล"], img: "", alt: "" },
     { title: "Full Custom VIP Package", cat: "Hiace 300 · Full Custom", tags: ["Hiace 300"], img: "", alt: "" }
   ],

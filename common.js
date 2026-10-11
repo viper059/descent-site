@@ -81,17 +81,37 @@
   }
   var sg = $("svc-grid");
   if (sg) {
-    makeTabs($("svc-tabs"), S.tabsServices, function (key) {
+    var svcKey = "all";
+    function svcCard(s) {
+      var top = [h("span", { class: "big-label", text: s.label })];
+      if (s.tag) top.push(h("span", { class: "tag" + (s.hot ? " hot" : ""), text: s.tag }));
+      var kids = [
+        h("div", { class: "card-top" }, top),
+        h("div", { class: "card-body" }, [h("div", { class: "card-cat", text: s.group }), h("div", { class: "card-name", text: s.name }), h("div", { class: "card-desc", text: s.desc }), h("span", { class: "card-cta", text: s.cta })])
+      ];
+      if (s.children) {
+        var b = h("button", { class: "card svc open", type: "button", "aria-label": s.name + " กดเพื่อดูรายการย่อย" }, kids);
+        b.addEventListener("click", function () { showChildren(s); });
+        return b;
+      }
+      return h("a", { class: "card svc", href: s.href }, kids);
+    }
+    function showChildren(parent) {
       sg.innerHTML = "";
-      S.services.filter(function (s) { return key === "all" || s.cat === key; }).forEach(function (s) {
-        var top = [h("span", { class: "big-label", text: s.label })];
-        if (s.tag) top.push(h("span", { class: "tag" + (s.hot ? " hot" : ""), text: s.tag }));
-        sg.appendChild(h("a", { class: "card svc", href: s.href }, [
-          h("div", { class: "card-top" }, top),
-          h("div", { class: "card-body" }, [h("div", { class: "card-cat", text: s.group }), h("div", { class: "card-name", text: s.name }), h("div", { class: "card-desc", text: s.desc }), h("span", { class: "card-cta", text: s.cta })])
-        ]));
-      });
-    }, "all");
+      var back = h("button", { class: "card svc back", type: "button" }, [
+        h("div", { class: "card-body" }, [h("div", { class: "card-cat", text: "กลับ" }), h("div", { class: "card-name", text: "← " + parent.name }), h("div", { class: "card-desc", text: "กลับไปดูบริการทั้งหมด" })])
+      ]);
+      back.addEventListener("click", function () { drawSvc(svcKey); });
+      sg.appendChild(back);
+      parent.children.forEach(function (c) { sg.appendChild(svcCard(c)); });
+      sg.firstChild.scrollIntoView({ block: "nearest" });
+    }
+    function drawSvc(key) {
+      svcKey = key;
+      sg.innerHTML = "";
+      S.services.filter(function (s) { return key === "all" || s.cat === key; }).forEach(function (s) { sg.appendChild(svcCard(s)); });
+    }
+    makeTabs($("svc-tabs"), S.tabsServices, drawSvc, "all");
   }
 
   /* ---------- gallery ---------- */
