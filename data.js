@@ -10,7 +10,7 @@ window.SHOP = {
   brand: "DESCENT",
   province: "พระนครศรีอยุธยา",
   phone: "081-491-8632",
-  phoneTel: "081-491-8632",
+  phoneTel: "0814918632",
   hours: "08:00 – 18:00 น.",
   hoursNote: "ทุกวัน ไม่เว้นวันหยุด",
   address: "",
