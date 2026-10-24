@@ -22,6 +22,8 @@
 html { scroll-behavior: smooth; }
 img { max-width: 100%; display: block; }
 body { background: var(--black); color: var(--text); font-family: var(--f-body); font-size: 16px; line-height: 1.65; }
+[data-page] { max-width: 960px; margin-inline: auto; }
+@media (min-width: 961px) { [data-page] { border-inline: 1px solid var(--border); } }
 a { color: inherit; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .sr { position: absolute; left: -9999px; }
@@ -55,7 +57,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-
 .eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--gold); }
 .hero h1 { line-height: 1; margin-bottom: 22px; }
 .h1-th { display: block; font-family: var(--f-head); font-weight: 600; font-size: clamp(34px, 5.5vw, 62px); color: var(--white); letter-spacing: 1px; }
-.h1-en { display: block; font-family: var(--f-display); font-weight: 400; font-size: clamp(64px, 8vw, 130px); letter-spacing: 3px; color: var(--gold); line-height: 0.9; max-width: 100%; }
+.h1-en { display: block; font-family: var(--f-display); font-weight: 400; font-size: clamp(64px, 8vw, 84px); letter-spacing: 3px; color: var(--gold); line-height: 0.9; max-width: 100%; }
 .hero .sub { font-family: var(--f-head); font-weight: 300; font-size: 16px; color: var(--light); letter-spacing: 1px; line-height: 1.9; max-width: 460px; margin-bottom: 36px; }
 .hero-img { position: relative; min-height: 320px; overflow: hidden; }
 .hero-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85); position: absolute; inset: 0; }
