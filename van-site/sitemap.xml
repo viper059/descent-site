@@ -4,16 +4,16 @@
 
   <!-- หน้าแรก (Homepage) -->
   <url>
-    <loc>https://descent-ayutthaya.com/</loc>
+    <loc>https://descents.info/</loc>
     <lastmod>2024-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="th" href="https://descent-ayutthaya.com/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://descents.info/"/>
   </url>
 
   <!-- บริการ (Services) -->
   <url>
-    <loc>https://descent-ayutthaya.com/#services</loc>
+    <loc>https://descents.info/#services</loc>
     <lastmod>2024-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -21,7 +21,7 @@
 
   <!-- ผลงาน (Portfolio / Gallery) -->
   <url>
-    <loc>https://descent-ayutthaya.com/#portfolio</loc>
+    <loc>https://descents.info/#portfolio</loc>
     <lastmod>2024-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -29,7 +29,7 @@
 
   <!-- เกี่ยวกับเรา (About) -->
   <url>
-    <loc>https://descent-ayutthaya.com/#story</loc>
+    <loc>https://descents.info/#story</loc>
     <lastmod>2024-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -37,7 +37,7 @@
 
   <!-- ติดต่อ (Contact) -->
   <url>
-    <loc>https://descent-ayutthaya.com/#contact</loc>
+    <loc>https://descents.info/#contact</loc>
     <lastmod>2024-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -1,11 +1,11 @@
 # robots.txt — ช่างหนุ่มอยุธยา Descent Van Customs
-# https://descent-ayutthaya.com/
+# https://descents.info/
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://descent-ayutthaya.com/sitemap.xml
+Sitemap: https://descents.info/sitemap.xml
 
 # Allow major search engine bots explicitly
 User-agent: Googlebot
