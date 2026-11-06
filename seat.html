@@ -309,7 +309,7 @@ nav { left: 50%; right: auto; width: 100%; max-width: 960px; transform: translat
 .g-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.55); color: #fff; border: 0; border-radius: 50%; width: 44px; height: 44px; font-size: 26px; cursor: pointer; }
 .g-prev { left: 10px; } .g-next { right: 10px; }
 .g-count { position: absolute; left: 10px; bottom: 10px; background: rgba(0,0,0,.65); color: #fff; font-size: 12px; padding: 3px 9px; border-radius: 12px; }
-.g-thumbs { display: flex; gap: 6px; overflow-x: auto; padding: 10px 16px; background: #000; }
+.g-thumbs { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; padding: 10px 16px; background: #000; }
 .g-thumbs img { height: 54px; width: 54px; object-fit: cover; opacity: .5; cursor: pointer; border: 2px solid transparent; flex: none; }
 .g-thumbs img.on { opacity: 1; border-color: var(--gold, #c9a14a); }
 @media (max-width: 600px) { nav { padding: 0 14px; } }
