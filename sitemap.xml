@@ -5,127 +5,120 @@
   <!-- หน้าแรก (Homepage) -->
   <url>
     <loc>https://descents.info/</loc>
-    <lastmod>2024-08-01</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="th" href="https://descents.info/"/>
   </url>
 
   <!-- บริการ (Services) -->
-  <url>
-    <loc>https://descents.info/#services</loc>
-    <lastmod>2024-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
 
   <!-- ผลงาน (Portfolio / Gallery) -->
-  <url>
-    <loc>https://descents.info/#portfolio</loc>
-    <lastmod>2024-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <!-- เกี่ยวกับเรา (About) -->
-  <url>
-    <loc>https://descents.info/#story</loc>
-    <lastmod>2024-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
   <!-- ติดต่อ (Contact) -->
-  <url>
-    <loc>https://descents.info/#contact</loc>
-    <lastmod>2024-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <url>
     <loc>https://descents.info/seat.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-console.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-cabin.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-seat-4row.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-seat-pair.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-front-shelf.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-armrest-box.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-tv-ac-cover.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-acrylic.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-mini-bar.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-footrest.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-rear-air.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-roof-leather.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-roof-renovate.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-rear-sound.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://descents.info/svc-audio.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://descents.info/svc-floor.html</loc>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
