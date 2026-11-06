@@ -832,13 +832,16 @@ nav { left: 50%; right: auto; width: 100%; max-width: 960px; transform: translat
 @media (max-width: 600px) { #lb .lb-thumbs img { width: 44px; height: 44px; } }
 #lb .lb-thumbs img { height: 56px; width: 56px; object-fit: cover; opacity: .5; cursor: pointer; border: 2px solid transparent; flex: none; }
 #lb .lb-thumbs img.on { opacity: 1; border-color: var(--gold, #c9a14a); }
+
+.nav-logo { display: flex; align-items: center; }
+@media (max-width: 600px) { .logo-img { height: 28px !important; } }
 </style>
 </head>
 <body>
 
 <!-- ═══ NAVBAR ═══ -->
 <nav>
-  <a class="nav-logo" href="#hero"><em>DESCENT</em> AYUTTHAYA</a>
+  <a class="nav-logo" href="#hero"><img src="img/logo-nav.png" alt="Descent Van Customs ช่างหนุ่มอยุธยา" class="logo-img" style="height:34px;width:auto;display:block"></a>
   <ul class="nav-center">
     <li><a href="#services">บริการ</a></li>
     <li><a href="#portfolio">ผลงาน</a></li>
@@ -1567,7 +1570,7 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeVide
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="footer-logo"><em>DESCENT</em> AYUTTHAYA</div>
+  <div class="footer-logo"><img src="img/logo-nav.png" alt="Descent Van Customs ช่างหนุ่มอยุธยา" style="height:40px;width:auto;display:block"></div>
   <div class="footer-counter" style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)">ผู้เข้าชม <img src="https://hits.sh/descents.info.svg?style=flat-square&amp;label=views&amp;color=c8a84b&amp;labelColor=161616" alt="จำนวนผู้เข้าชม" height="20" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
   <div class="footer-links">
     <a href="#services">บริการ</a>

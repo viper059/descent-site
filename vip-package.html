@@ -331,6 +331,9 @@ nav { left: 50%; right: auto; width: 100%; max-width: 960px; transform: translat
 .g-thumbs img.on { opacity: 1; border-color: var(--gold, #c9a14a); }
 @media (max-width: 600px) { nav { padding: 0 14px; } .nav-back { display: none; } .nav-logo { font-size: 18px; letter-spacing: 3px; white-space: nowrap; } .nav-contact { white-space: nowrap; } }
 
+.nav-logo { display: flex; align-items: center; }
+@media (max-width: 600px) { .logo-img { height: 28px !important; } }
+
 /* ── VIP PACKAGE MAP ── */
 .vmap { position: relative; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto auto; gap: 0 40px; padding: 48px 32px; border-bottom: 1px solid var(--border); background: radial-gradient(ellipse at center, #15130c 0%, var(--black) 70%); }
 .vmap-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
@@ -378,7 +381,7 @@ nav { left: 50%; right: auto; width: 100%; max-width: 960px; transform: translat
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="index.html"><em>DESCENT</em> AYUTTHAYA</a>
+  <a class="nav-logo" href="index.html"><img src="img/logo-nav.png" alt="Descent Van Customs ช่างหนุ่มอยุธยา" class="logo-img" style="height:34px;width:auto;display:block"></a>
   <a class="nav-back" href="index.html">← กลับหน้าหลัก</a>
   <a class="nav-contact" href="tel:0814918632">📞 โทรเลย</a>
 </nav>
@@ -454,7 +457,7 @@ nav { left: 50%; right: auto; width: 100%; max-width: 960px; transform: translat
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo"><em>DESCENT</em> AYUTTHAYA</div>
+  <div class="footer-logo"><img src="img/logo-nav.png" alt="Descent Van Customs ช่างหนุ่มอยุธยา" style="height:40px;width:auto;display:block"></div>
   <div class="footer-copy">© 2024 ช่างหนุ่มอยุธยา สำนักแต่งรถตู้ Descent</div>
 </footer>
 
