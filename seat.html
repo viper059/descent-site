@@ -294,6 +294,25 @@ footer {
   .contact-row { padding: 32px 20px; flex-direction: column; }
   footer { padding: 20px; flex-direction: column; text-align: center; }
 }
+
+/* ── WIDTH CAP 960 + PHOTOS ── */
+html { background: #000; }
+body { max-width: 960px; margin: 0 auto; position: relative; box-shadow: 0 0 0 1px var(--border); }
+nav { left: 50%; right: auto; width: 100%; max-width: 960px; transform: translateX(-50%); padding: 0 24px; }
+.modal-box { max-width: 960px; }
+.card-photo { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+.product-card:hover .card-photo { transform: scale(1.04); }
+.card-photos { position: absolute; right: 10px; bottom: 10px; z-index: 2; background: rgba(0,0,0,.65); color: #fff; font-size: 12px; padding: 3px 9px; border-radius: 12px; pointer-events: none; }
+.modal-img.has-gallery { display: block; aspect-ratio: auto; font-size: 16px; }
+.g-main { position: relative; background: #000; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
+.g-main img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.g-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.55); color: #fff; border: 0; border-radius: 50%; width: 44px; height: 44px; font-size: 26px; cursor: pointer; }
+.g-prev { left: 10px; } .g-next { right: 10px; }
+.g-count { position: absolute; left: 10px; bottom: 10px; background: rgba(0,0,0,.65); color: #fff; font-size: 12px; padding: 3px 9px; border-radius: 12px; }
+.g-thumbs { display: flex; gap: 6px; overflow-x: auto; padding: 10px 16px; background: #000; }
+.g-thumbs img { height: 54px; width: 54px; object-fit: cover; opacity: .5; cursor: pointer; border: 2px solid transparent; flex: none; }
+.g-thumbs img.on { opacity: 1; border-color: var(--gold, #c9a14a); }
+@media (max-width: 600px) { nav { padding: 0 14px; } }
 </style>
 </head>
 <body>
@@ -342,7 +361,7 @@ footer {
 
   <!-- เบาะ 4 แถว -->
   <div class="product-card" data-cat="4row" onclick="openDetail('seat4row')">
-    <div class="card-img bg-1"><div class="card-emoji">🛋️</div><span class="card-badge badge-hot badge-red">POPULAR</span></div>
+    <div class="card-img bg-1"><img class="card-photo" src="img/seat-4row/1.jpg" alt="" loading="lazy"><span class="card-photos">📷 12 รูป</span><span class="card-badge badge-hot badge-red">POPULAR</span></div>
     <div class="card-body">
       <div class="card-cat">4 แถว</div>
       <div class="card-name">เบาะ 4 แถว Standard</div>
@@ -390,7 +409,7 @@ footer {
 
   <!-- เบาะอัลพาธ -->
   <div class="product-card" data-cat="alpha" onclick="openDetail('seatAlpha')">
-    <div class="card-img bg-4"><div class="card-emoji">✨</div><span class="card-badge badge-new">NEW</span></div>
+    <div class="card-img bg-4"><img class="card-photo" src="img/seat-pair/1.jpg" alt="" loading="lazy"><span class="card-badge badge-new">NEW</span></div>
     <div class="card-body">
       <div class="card-cat">อัลพาธ</div>
       <div class="card-name">เบาะอัลพาธ Captain Seat</div>
@@ -406,7 +425,7 @@ footer {
 
   <!-- เบาะมิกกี้เมาส์ -->
   <div class="product-card" data-cat="mickey" onclick="openDetail('seatMickey')">
-    <div class="card-img bg-5"><div class="card-emoji">🎯</div><span class="card-badge badge-red">BEST SELLER</span></div>
+    <div class="card-img bg-5"><img class="card-photo" src="img/seat-vip/1.jpg" alt="" loading="lazy"><span class="card-photos">📷 12 รูป</span><span class="card-badge badge-red">BEST SELLER</span></div>
     <div class="card-body">
       <div class="card-cat">มิกกี้เมาส์</div>
       <div class="card-name">เบาะมิกกี้เมาส์ VIP</div>
@@ -523,6 +542,38 @@ const seats = {
   }
 };
 
+
+// ── Photo galleries ──
+seats.seat4row.gallery = ['seat-4row', 12];
+seats.seatAlpha.gallery = ['seat-pair', 1];
+seats.seatMickey.gallery = ['seat-vip', 12];
+let gSlug, gN, gI;
+function gShow(k) {
+  gI = (k + gN - 1) % gN + 1;
+  document.getElementById('gImg').src = 'img/' + gSlug + '/' + gI + '.jpg';
+  document.getElementById('gCount').textContent = gI + ' / ' + gN;
+  document.querySelectorAll('#gThumbs img').forEach((t, x) => t.classList.toggle('on', x + 1 === gI));
+  const nx = new Image(); nx.src = 'img/' + gSlug + '/' + (gI % gN + 1) + '.jpg';
+}
+function buildGallery(slug, n) {
+  gSlug = slug; gN = n;
+  const nav = n > 1;
+  let h = '<div class="g-main"><img id="gImg" alt="">' +
+    (nav ? '<button type="button" class="g-nav g-prev" onclick="gShow(gI-1)" aria-label="ก่อนหน้า">&#8249;</button><button type="button" class="g-nav g-next" onclick="gShow(gI+1)" aria-label="ถัดไป">&#8250;</button>' : '') +
+    '<span class="g-count" id="gCount"></span></div>';
+  if (nav) {
+    h += '<div class="g-thumbs" id="gThumbs">';
+    for (let k = 1; k <= n; k++) h += '<img src="img/' + slug + '/' + k + '.jpg" loading="lazy" onclick="gShow(' + k + ')" alt="">';
+    h += '</div>';
+  }
+  return h;
+}
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('modal').classList.contains('open') || !document.getElementById('gImg')) return;
+  if (e.key === 'ArrowLeft') gShow(gI - 1);
+  if (e.key === 'ArrowRight') gShow(gI + 1);
+});
+
 // ── Detect desktop (>= 768px) ──
 function isDesktop() { return window.innerWidth >= 768; }
 
@@ -541,7 +592,9 @@ function openDetail(id) {
 function openModal(d) {
   document.getElementById('modalTitle').textContent = d.title;
   document.getElementById('modalCat').textContent = d.cat;
-  document.getElementById('modalImg').textContent = d.emoji;
+  const mi = document.getElementById('modalImg');
+  if (d.gallery) { mi.classList.add('has-gallery'); mi.innerHTML = buildGallery(d.gallery[0], d.gallery[1]); gShow(1); }
+  else { mi.classList.remove('has-gallery'); mi.textContent = d.emoji; }
   document.getElementById('modalDesc').textContent = d.desc;
   const specsEl = document.getElementById('modalSpecs');
   specsEl.innerHTML = d.specs.map(s => `<span class="modal-spec-tag">${s}</span>`).join('');
