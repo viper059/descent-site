@@ -805,6 +805,14 @@ nav { left: 50%; right: auto; width: 100%; max-width: 960px; transform: translat
 @media (max-width: 600px) { #servicesGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } #servicesGrid .card-desc { display: none; } }
 #servicesGrid .card-img-inner { font-size: 48px; }
 @media (max-width: 768px) { #video-grid { grid-template-columns: 1fr !important; } }
+/* mid banner fit */
+.mid-banner { height: auto; min-height: 420px; padding: 64px 0; }
+.mid-banner-content { width: 100%; max-width: 600px; box-sizing: border-box; }
+.mid-banner-content h2 { font-size: clamp(40px, 6vw, 64px); line-height: 1.1; }
+.mid-banner-content p { max-width: 100%; }
+.mid-banner-stats { flex-wrap: wrap; row-gap: 16px; }
+.mid-banner-bg { font-size: 240px; }
+@media (max-width: 600px) { .mid-banner { padding: 48px 0; min-height: 0; } .mid-banner-content h2 { font-size: 36px; } .mid-banner-bg { font-size: 160px; } .mstat { padding-right: 12px; margin-right: 12px; } .mstat-num { font-size: 30px; } .mstat-label { letter-spacing: 1px; } }
 .card-photos { position: absolute; right: 10px; bottom: 10px; z-index: 2; background: rgba(0,0,0,.65); color: #fff; font-size: 12px; padding: 3px 9px; border-radius: 12px; pointer-events: none; }
 /* ─── LIGHTBOX ─── */
 #lb { position: fixed; inset: 0; z-index: 500; background: rgba(0,0,0,.94); display: none; flex-direction: column; }
