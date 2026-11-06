@@ -797,10 +797,12 @@ nav { left: 50%; right: auto; width: 100%; max-width: 960px; transform: translat
 .nav-center a { padding: 0 12px; letter-spacing: 1px; }
 @media (max-width: 600px) { .nav-logo { font-size: 17px; letter-spacing: 2px; } .nav-line-btn { white-space: nowrap; padding: 8px 12px; } nav { padding: 0 14px; } }
 /* services grid like previous site: 3 cols, short images */
-#servicesGrid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); gap: 1px; background: var(--border); }
+#servicesGrid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 1px; background: var(--border); }
 #servicesGrid .product-card { border: 0 !important; background: var(--black); }
 #servicesGrid .product-card:hover { background: var(--dark); }
-#servicesGrid .card-img { aspect-ratio: 16 / 7; }
+#servicesGrid .card-img { aspect-ratio: 3 / 4; }
+#servicesGrid .card-body { padding: 16px 16px 20px; }
+@media (max-width: 600px) { #servicesGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } #servicesGrid .card-desc { display: none; } }
 #servicesGrid .card-img-inner { font-size: 48px; }
 @media (max-width: 768px) { #video-grid { grid-template-columns: 1fr !important; } }
 .card-photos { position: absolute; right: 10px; bottom: 10px; z-index: 2; background: rgba(0,0,0,.65); color: #fff; font-size: 12px; padding: 3px 9px; border-radius: 12px; pointer-events: none; }
