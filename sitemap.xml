@@ -20,6 +20,30 @@
   <!-- ติดต่อ (Contact) -->
 
   <url>
+    <loc>https://descents.info/packages.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://descents.info/pkg-work.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://descents.info/pkg-family.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://descents.info/pkg-executive.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://descents.info/vip-package.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>

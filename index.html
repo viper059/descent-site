@@ -844,6 +844,7 @@ nav { left: 50%; right: auto; width: 100%; max-width: 960px; transform: translat
   <a class="nav-logo" href="#hero"><img src="img/logo-nav.png" alt="Descent Van Customs ช่างหนุ่มอยุธยา" class="logo-img" style="height:34px;width:auto;display:block"></a>
   <ul class="nav-center">
     <li><a href="#services">บริการ</a></li>
+    <li><a href="packages.html">แพ็กเกจ</a></li>
     <li><a href="#portfolio">ผลงาน</a></li>
     <li><a href="#models">รุ่นรถ</a></li>
     <li><a href="#story">เกี่ยวกับเรา</a></li>
@@ -1010,6 +1011,7 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeVide
   <!-- Category Tabs -->
   <div class="cat-tabs">
     <div class="cat-tab active" onclick="filterCat(this, 'all')">ทั้งหมด</div>
+    <div class="cat-tab" onclick="filterCat(this, 'package')">แพ็กเกจ</div>
     <div class="cat-tab" onclick="filterCat(this, 'interior')">ตกแต่งภายใน</div>
     <div class="cat-tab" onclick="filterCat(this, 'exterior')">ตกแต่งภายนอก</div>
     <div class="cat-tab" onclick="filterCat(this, 'forsale')">รถตู้มือสอง</div>
@@ -1018,10 +1020,40 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeVide
   <!-- Product/Service Grid -->
   <div class="product-grid" id="servicesGrid">
 
-    <div class="product-card" data-cat="interior" data-page="vip-package.html">
+    <div class="product-card" data-cat="package" data-page="pkg-work.html">
+      <div class="card-img"><span style="position:absolute;top:12px;left:12px;z-index:2;background:var(--gold);color:#000;font-family:'Kanit',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;padding:3px 10px">WORK</span><img class="card-img-inner" src="img/seat-4row/1.jpg" alt="ชุดคนทำมาหากิน" loading="lazy" style="object-fit:cover"></div>
+      <div class="card-body">
+        <div class="card-cat">แพ็กเกจ</div>
+        <div class="card-name">Descent Work · ชุดคนทำมาหากิน</div>
+        <div class="card-desc">แต่งเสร็จ ผ่านขนส่ง วิ่งงานได้เลย · งบตั้งต้น 45,000–90,000 บาท</div>
+        <a href="pkg-work.html" class="card-cta">ดูแพ็กเกจ</a>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="package" data-page="pkg-family.html">
+      <div class="card-img"><span style="position:absolute;top:12px;left:12px;z-index:2;background:var(--gold);color:#000;font-family:'Kanit',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;padding:3px 10px">FAMILY</span><img class="card-img-inner" src="img/seat-vip/2.jpg" alt="ชุดครอบครัว" loading="lazy" style="object-fit:cover"></div>
+      <div class="card-body">
+        <div class="card-cat">แพ็กเกจ</div>
+        <div class="card-name">Descent Family · ชุดครอบครัว</div>
+        <div class="card-desc">ห้องนั่งเล่นเคลื่อนที่ของครอบครัว · งบตั้งต้น 120,000–250,000 บาท</div>
+        <a href="pkg-family.html" class="card-cta">ดูแพ็กเกจ</a>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="package" data-page="pkg-executive.html">
+      <div class="card-img"><span style="position:absolute;top:12px;left:12px;z-index:2;background:var(--gold);color:#000;font-family:'Kanit',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;padding:3px 10px">EXECUTIVE</span><img class="card-img-inner" src="img/seat-pair/1.jpg" alt="ชุดผู้บริหาร / ลิมูซีน" loading="lazy" style="object-fit:cover"></div>
+      <div class="card-body">
+        <div class="card-cat">แพ็กเกจ</div>
+        <div class="card-name">Descent Executive · ชุดผู้บริหาร / ลิมูซีน</div>
+        <div class="card-desc">ห้องทำงานและเลานจ์เคลื่อนที่ · งบตั้งต้น 350,000–800,000+ บาท</div>
+        <a href="pkg-executive.html" class="card-cta">ดูแพ็กเกจ</a>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="package" data-page="vip-package.html">
       <div class="card-img"><span class="card-badge" style="position:absolute;top:12px;left:12px;z-index:2;background:var(--gold);color:#000;font-family:'Kanit',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;padding:3px 10px">PACKAGE</span><img class="card-img-inner" src="img/vip-hero.jpg" alt="ชุดแต่งภายใน VIP" loading="lazy" style="object-fit:cover"></div>
       <div class="card-body">
-        <div class="card-cat">ชุดแต่ง</div>
+        <div class="card-cat">แพ็กเกจ</div>
         <div class="card-name">ชุดแต่งภายใน VIP</div>
         <div class="card-desc">ชุดแต่งครบทั้งคัน หิ้งหน้า แป้นทีวี หลังคา VIP ซาวด์ท้าย ออกแบบเข้าชุดกัน</div>
         <a href="vip-package.html" class="card-cta">ดูชุดแต่ง</a>
